@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# https://raw.githubusercontent.com/besthyhy/auto/blob/master/centos8-postgresql.sh
 
-https://raw.githubusercontent.com/besthyhy/auto/master/centos8-postgresql.sh
+# https://raw.githubusercontent.com/besthyhy/auto/master/centos8-postgresql.sh
 
 dnf update -y
 
@@ -24,7 +23,9 @@ systemctl enable redis
 dnf module list postgresql
 dnf module enable postgresql:12 -y
 dnf install postgresql-server -y
-
+postgresql-setup --initdb
+systemctl start postgresql
+systemctl enable postgresql
 sudo -i -u postgres
 psql
 createuser --interactive
