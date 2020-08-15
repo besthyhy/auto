@@ -2,6 +2,8 @@
 
 # https://raw.githubusercontent.com/besthyhy/auto/blob/master/centos8-postgresql.sh
 
+https://raw.githubusercontent.com/besthyhy/auto/master/centos8-postgresql.sh
+
 dnf update -y
 
 dnf install rsync -y
