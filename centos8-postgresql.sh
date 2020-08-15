@@ -17,7 +17,7 @@ yarn config set registry https://registry.npm.taobao.org
 npm install pm2 -g
 
 dnf install redis -y
-sed -i -e "s/#requirepass\ foobared/requirepass\ ${1}/g" /etc/redis.conf
+sed -i -e "s/#\ requirepass\ foobared/requirepass\ ${1}/g" /etc/redis.conf
 systemctl start redis
 systemctl enable redis
 
